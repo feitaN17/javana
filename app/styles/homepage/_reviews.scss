@@ -1,0 +1,159 @@
+.reviews {
+
+	&__inner {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@include mq("tablet") {
+			flex-direction: column;
+			gap: 20px;
+		}
+	}
+
+	&__img {
+		max-width: 300px;
+		width: 100%;
+		height: 300px;
+		object-fit: cover;
+		border-radius: 50%;
+		margin-right: 10px;
+
+		@include mq("tablet-2") {
+			max-width: 250px;
+			height: 250px;
+		}
+
+		@include mq("tablet") {
+			max-width: 150px;
+			height: 150px;
+			margin-right: 0;
+		}
+
+		@include mq("phone") {
+			max-width: 100px;
+			height: 100px;
+		}
+	}
+
+	&__content {
+		text-transform: uppercase;
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 24px;
+		letter-spacing: 0.05em;
+		max-width: 637px;
+		margin-bottom: 30px;
+		position: relative;
+
+		&::before,
+		&::after {
+			@include pseudo;
+			width: 30px;
+			height: 20px;
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+
+			@include mq("tablet") {
+				width: 20px;
+				height: 15px;
+			}
+		}
+
+		&::before {
+			background-image: url('../images/icons/icon-quots-right.svg');
+			bottom: 0;
+			right: 0;
+		}
+
+		&::after {
+			background-image: url('../images/icons/icon-quots-left.svg');
+			left: 0;
+			top: 0;
+		}
+
+		p {
+			padding: 0 60px;
+
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+
+			@include mq("phone") {
+				padding: 0 30px;
+			}
+		}
+
+		@include mq("tablet") {
+			font-size: 14px;
+			margin-bottom: 15px;
+		}
+	}
+
+	&__name {
+		padding: 0 60px;
+		@extend %rubik-500;
+		font-size: 20px;
+		color: $accent;
+		letter-spacing: 0.05em;
+
+		@include mq("tablet") {
+			font-size: 16px;
+		}
+
+		@include mq("phone") {
+			padding: 0 30px;
+		}
+	}
+}
+
+.reviews-swiper {
+	list-style: none;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	z-index: 1;
+
+	&__wrapper {
+		margin-bottom: 40px;
+
+		@include mq("tablet") {
+			margin-bottom: 20px;
+		}
+	}
+
+
+	&__nav {
+		margin: 0 auto;
+		position: relative;
+		max-width: 150px;
+		height: 30px;
+	}
+
+	&__prev {
+		color: $white;
+		top: 50%;
+		transform: translateY(-18%);
+
+		&::after {
+
+			font-size: 24px;
+		}
+	}
+
+	&__next {
+		color: $white;
+		top: 50%;
+		transform: translateY(-18%);
+
+		&::after {
+
+			font-size: 24px;
+		}
+	}
+}

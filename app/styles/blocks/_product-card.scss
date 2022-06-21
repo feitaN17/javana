@@ -1,0 +1,115 @@
+.product-card {
+	background-color: #FFFFFF;
+	border-radius: 15px;
+	color: $cardColor;
+	letter-spacing: 0.05em;
+	overflow: hidden;
+	position: relative;
+	height: 100%;
+	transition: transform .8s ease-in-out;
+
+	&:hover {
+		.product-card__more {
+			transform: translateY(0);
+		}
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__top {
+		margin-bottom: 15px;
+
+		@include mq("tablet") {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__img {
+		margin-bottom: 15px;
+		width: 100%;
+		height: 175px;
+		object-fit: cover;
+
+		@include mq("tablet") {
+			height: 150px;
+			margin-bottom: 10px;
+		}
+
+		@include mq("phone") {
+			height: 130px;
+		}
+	}
+
+	&__title {
+		@extend %rubik-600;
+		font-size: 16px;
+		margin-bottom: 20px;
+		padding: 0 12px;
+		@include line-clamp(1);
+
+		@include mq("tablet") {
+			font-size: 14px;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__desk {
+		font-size: 14px;
+		padding: 0 12px;
+		display: inline-block;
+		@include line-clamp(3);
+
+		@include mq("phone") {
+			font-size: 12px;
+		}
+	}
+
+	&__bottom {
+		padding: 0 12px;
+	}
+
+	&__price {
+		@extend %rubik-500;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+
+		span {
+			font-weight: 400;
+			display: block;
+			text-transform: lowercase;
+		}
+
+		@include mq("phone") {
+			font-size: 12px;
+		}
+	}
+
+	&__more {
+		height: 100%;
+		width: 100%;
+		background: linear-gradient(126.61deg, #FF0000 -74.47%, #313131 8.9%, rgba(82, 82, 82, 0) 269.35%, rgba(0, 0, 0, 0.47) 322.46%, rgba(0, 0, 0, 0.38) 371.63%);
+		;
+		transform: translateY(100%);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		transition: transform .3s ease-out;
+	}
+
+	&__btn {
+		@extend %rubik-500;
+		text-transform: uppercase;
+		padding: 10px 15px;
+		background-color: $accent;
+		color: $white;
+		font-size: 14px;
+		border-radius: 15px;
+	}
+}
