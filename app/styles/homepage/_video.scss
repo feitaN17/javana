@@ -57,7 +57,7 @@
 			background-position: center;
 			height: 55px;
 			width: 30px;
-			@include recolor(#252525);
+			filter: invert(87%) sepia(3%) saturate(50%) hue-rotate(314deg) brightness(115%) contrast(101%);
 
 			@include mq("phone") {
 				width: 20px;

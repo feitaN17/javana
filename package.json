@@ -45,6 +45,7 @@
 	"dependencies": {
 		"@fancyapps/fancybox": "^3.5.7",
 		"animate.css": "^4.1.1",
+		"imask": "^6.4.2",
 		"jquery": "^3.6.0",
 		"micromodal": "^0.4.10",
 		"smooth-scroll": "^16.1.3",

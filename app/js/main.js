@@ -5,6 +5,7 @@ import MicroModal from 'micromodal'
 import SmoothScroll from 'smooth-scroll'
 import WOW from 'wow.js'
 import { Fancybox } from '@fancyapps/fancybox'
+import IMask from 'imask'
 
 document.addEventListener('DOMContentLoaded', () => {
 	new WOW().init()
@@ -103,6 +104,12 @@ document.addEventListener('DOMContentLoaded', () => {
 			},
 		},
 	})
+
+	const element = document.querySelector('.phone')
+	const maskOptions = {
+		mask: '+{7}(000)000-00-00',
+	}
+	const mask = IMask(element, maskOptions)
 
 	const burgerBtn = document.querySelector('.burger-btn')
 	const burgerMenu = document.querySelector('.burger-menu')

@@ -43,6 +43,7 @@ body {
 	width: 100%;
 	padding: 0 15px;
 	margin: 0 auto;
+	height: 100%;
 }
 
 .overlay {
@@ -152,11 +153,15 @@ body {
 }
 
 .title {
-	@extend %title-font;
+	@extend %open-sans;
 	margin-bottom: 60px;
 	position: relative;
 	padding-bottom: 20px;
 	text-align: center;
+	letter-spacing: 0.3em;
+	font-size: 36px;
+	font-weight: 300;
+	text-transform: uppercase;
 
 	&::before {
 		@include pseudo;
@@ -223,7 +228,7 @@ body {
 		background-color: $cardColor;
 
 		&::before {
-			@include recolor($accent);
+			filter: invert(60%) sepia(81%) saturate(3899%) hue-rotate(334deg) brightness(100%) contrast(73%);
 		}
 	}
 
@@ -237,7 +242,7 @@ body {
 		width: 25px;
 		height: 15px;
 		position: absolute;
-		@include recolor($cardColor);
+		filter: invert(86%) sepia(17%) saturate(515%) hue-rotate(42deg) brightness(103%) contrast(85%);
 	}
 }
 
@@ -272,6 +277,10 @@ body {
 		color: $white;
 	}
 
+	&__header {
+		margin-bottom: 20px;
+	}
+
 	&__content {
 		display: flex;
 		flex-direction: column;
@@ -293,6 +302,7 @@ body {
 
 	&__textarea {
 		min-height: 100px;
+		resize: vertical;
 	}
 }
 
