@@ -203,7 +203,7 @@ body {
 	bottom: 35px;
 	right: 35px;
 	display: none;
-	z-index: 50;
+	z-index: 30;
 
 	@include mq("tablet-2") {
 		width: 50px;

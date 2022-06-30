@@ -105,11 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		},
 	})
 
-	const element = document.querySelector('.phone')
-	const maskOptions = {
-		mask: '+{7}(000)000-00-00',
-	}
-	const mask = IMask(element, maskOptions)
+	document.querySelectorAll('.phone-mask').forEach((e) => {
+		const phoneMask = IMask(e, { mask: '+{7} (000)000-00-00' })
+	})
 
 	const burgerBtn = document.querySelector('.burger-btn')
 	const burgerMenu = document.querySelector('.burger-menu')
