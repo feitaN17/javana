@@ -77,7 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 
 	const servicesSwiper = new Swiper('.services-swiper', {
-		loop: true,
 		autoHeight: true,
 		slidesPerView: 2,
 		spaceBetween: 10,

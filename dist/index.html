@@ -190,7 +190,7 @@
 
 
 							<div class="product-card__more">
-								<button class="product-card__btn" type="button" data-micromodal-open="modal-2">Подробнее</button>
+								<button class="product-card__btn" type="button" data-micromodal-open="modal-1">Подробнее</button>
 							</div>
 
 						</article>
@@ -219,7 +219,7 @@
 
 
 							<div class="product-card__more">
-								<button class="product-card__btn" type="button">Подробнее</button>
+								<button class="product-card__btn" type="button" data-micromodal-open="modal-1">Подробнее</button>
 							</div>
 
 						</article>
@@ -248,7 +248,7 @@
 
 
 							<div class="product-card__more">
-								<button class="product-card__btn" type="button">Подробнее</button>
+								<button class="product-card__btn" type="button" data-micromodal-open="modal-1">Подробнее</button>
 							</div>
 
 						</article>
@@ -278,7 +278,36 @@
 
 
 							<div class="product-card__more">
-								<button class="product-card__btn" type="button">Подробнее</button>
+								<button class="product-card__btn" type="button" data-micromodal-open="modal-1">Подробнее</button>
+							</div>
+
+						</article>
+
+					</li>
+					<li class="services-swiper__slide swiper-slide">
+
+						<article class="product-card">
+
+							<div class="product-card__inner">
+								<div class="product-card__top">
+									<img class="product-card__img" src="images/services/services-2.jpg" alt="картинка услуги">
+
+									<h3 class="product-card__title">Вокал/R'N'B/POP</h3>
+
+									<span class="product-card__desk">Пакет Запись + Сведение Вокал/R'N'B/POP</span>
+								</div>
+
+								<div class="product-card__bottom">
+									<div class="product-card__price">
+										Стоимость:
+										<span>3000 р.</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="product-card__more">
+								<button class="product-card__btn" type="button" data-micromodal-open="modal-1">Подробнее</button>
 							</div>
 
 						</article>
@@ -452,60 +481,28 @@
 	</div>
 </section>
 
-			<div class="modals">
-				<!-- [1] -->
+
+		</main>
+
+		<div class="modals">
+			<!-- [1] -->
 <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
 
 	<!-- [2] -->
 	<div class="modal__overlay" tabindex="-1" data-micromodal-close>
 
 		<!-- [3] -->
-		<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+		<div class="modal__container" role="dialog" aria-modal="true">
 
 
-			<header class="modal__header">
-				<h2 class="modal__title" id="modal-1-title">
+			<div class="modal__header">
+				<h2 class="modal__title">
 					Оставить заявку
 				</h2>
 
 				<!-- [4] -->
 				<button class="modal__close" aria-label="Закрыть окно" data-micromodal-close></button>
-			</header>
-
-			<form action="#">
-
-				<main class="modal__content">
-					<input class="form-input modal__input" type="text" name="VH-name" placeholder="Ваше имя..." required>
-					<input class="form-input modal__input phone-mask" type="tel" name="VH-phone" placeholder="+7(___)___-__-__" required>
-					<textarea class="form-input modal__textarea" name="massage" placeholder="Укажите здесь какую вы хотели бы услугу..." required></textarea>
-				</main>
-
-				<footer class="modal__footer">
-					<button class="button" type="submit"><span>Отправить</span></button>
-				</footer>
-			</form>
-
-		</div>
-	</div>
-</div>
-				<!-- [1] -->
-<div class="modal micromodal-slide" id="modal-2" aria-hidden="true">
-
-	<!-- [2] -->
-	<div class="modal__overlay" tabindex="-1" data-micromodal-close>
-
-		<!-- [3] -->
-		<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-
-
-			<header class="modal__header">
-				<h2 class="modal__title" id="modal-1-title">
-					Оставить заявку
-				</h2>
-
-				<!-- [4] -->
-				<button class="modal__close" aria-label="Закрыть окно" data-micromodal-close></button>
-			</header>
+			</div>
 
 			<div class="modal__info">
 				<ul class="modal__list">
@@ -517,23 +514,21 @@
 
 			<form action="#">
 
-				<main class="modal__content">
+				<div class="modal__content">
 					<input class="form-input modal__input" type="text" name="VH-name" placeholder="Ваше имя..." required>
 					<input class="form-input modal__input phone-mask" type="tel" name="VH-phone" placeholder="+7(___)___-__-__" required>
 					<textarea class="form-input modal__textarea" name="massage" placeholder="Укажите здесь какую вы хотели бы услугу..." required></textarea>
-				</main>
+				</div>
 
-				<footer class="modal__footer">
+				<div class="modal__footer">
 					<button class="button" type="submit"><span>Отправить</span></button>
-				</footer>
+				</div>
 			</form>
 
 		</div>
 	</div>
 </div>
-
-			</div>
-		</main>
+		</div>
 
 		<footer class="footer section" id="footer" data-scroll-contacts>
 	<div class="container">
@@ -542,19 +537,19 @@
 			<div class="footer__map">
 				<iframe
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2497.811700328025!2d58.46542859261096!3d51.24096268725487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x417ffa5a601474ed%3A0x9c68092cf616b220!2z0YPQuy4g0KfQtdGA0L3Ri9GI0LXQstCwLCAxNiwg0J7RgNGB0LosINCe0YDQtdC90LHRg9GA0LPRgdC60LDRjyDQvtCx0LsuLCA0NjI0MDQ!5e0!3m2!1sru!2sru!4v1655639197530!5m2!1sru!2sru"
-					width="100%" height="100%" style="border-radius:25px;border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					style="border-radius:25px;border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
 
 			<ul class="footer__list">
-				<div class="footer__item">
+				<li class="footer__item">
 					<p class="footer__text">мы находимся по адресу:</p>
 					<span>ул. чернышева, 16</span>
-				</div>
-				<div class="footer__item">
+				</li>
+				<li class="footer__item">
 					<p class="footer__text">по различным вопросам обращаться по телефону:</p>
 					<a class="footer__tel" href="tel:79619443897">+7(961) 944-38-97</a>
-				</div>
-				<div class="footer__item">
+				</li>
+				<li class="footer__item">
 					<p class="footer__text">или в наши социальные сети:</p>
 					<ul class="social">
 						<li class="social__item">
@@ -573,7 +568,7 @@
 							</a>
 						</li>
 					</ul>
-				</div>
+				</li>
 			</ul>
 		</address>
 	</div>
